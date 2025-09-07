@@ -1,0 +1,15 @@
+// Filter all the palindrome words of a list using stream 
+
+import java.util.*;
+
+public class FilterAllPalindromeWordsFromListUsingStream {
+    public static void main(String[] args) {
+      
+      String[] str = { "abc", "ada", "kiran", "level", "apple", "max", "madam" };
+      
+      Arrays.stream(str)
+        .filter(s -> new StringBuilder(s).reverse().toString().equals(s))
+        .forEach(e -> System.out.println(e));
+      
+  }
+}
